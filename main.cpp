@@ -4,21 +4,29 @@ using namespace std;
 
 int main()
 {
-    const double rate1 = 1.10;
-    const double rate2 = 2.20;
-    const double rate3 = 3.70;
-    const double rate4 = 4.80;
-    double total_charge;
-    double weight, distance, rate;
+    int num1, num2, num3;
+    int maxVal, midVal, minVal;
 
-    cout << "Enter the package weight and distance: ";
-    cin >> weight >> distance;
+    cout << "Enter three integers: ";
+    cin >> num1 >> num2 >> num3;
 
-    /*
-    Code you program here
-    */
+    // TODO
+    // Find max, min, mid using only if-statements (no loops, no functions, no arrays)
 
-    // Use the followig print statements
-    cout << setw(10) << left << setprecision(2) << fixed;
-    cout << total_charge << endl;
+    // Find max
+    maxVal = num1;
+    if (num2 > maxVal) maxVal = num2;
+    if (num3 > maxVal) maxVal = num3;
+
+    // Find min
+    minVal = num1;
+    if (num2 < minVal) minVal = num2;
+    if (num3 < minVal) minVal = num3;
+
+    // Find mid (the one that is not max and not min)
+    midVal = num1 + num2 + num3 - maxVal - minVal;
+
+    cout << maxVal << " " << midVal << " " << minVal << endl;
+
+    return 0;
 }
